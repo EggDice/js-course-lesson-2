@@ -37,12 +37,34 @@ For example, how much does this basket of books cost?
 1 copy of the fifth book
 (answer: 51.20 EUR)
 
-Clues:
+### Clues
 - You’ll find that this Kata is easy at the start. You can get going with tests for baskets of 0 books, 1 book, 2 identical books, 2 different books… and it is not too difficult to work in small steps and gradually introduce complexity.
 - However, the twist becomes apparent when you sit down and work out how much you think the sample basket above should cost. It isn’t 5*8*0.75+3*8*0.90. It is in fact 4*8*0.8+4*8*0.8. So the trick with this Kata is not that the acceptance test you’ve been given is wrong. The trick is that you have to write some code that is intelligent enough to notice that two sets of four books is cheaper than a set of five and a set of three.
 - You will have to introduce a certain amount of clever optimization algorithm. But not too much! This problem does not require a fully fledged general purpose optimizer. Try to solve just this problem well in order to share it for everyone or even in the ??? . Trust that you can generalize and improve your solution if and when new requirements come along.
 
-Process:
+### Suggested Tests
+
+t.equal(potter([]), 0);
+t.equal(potter([1]), 8);
+t.equal(potter([2]), 8);
+t.equal(potter([3]), 8);
+t.equal(potter([4]), 8);
+t.equal(potter([5]), 8);
+
+t.equal(potter([1, 1]), 2 * 8);
+
+t.equal(potter([1, 2]), 2 * 8 * 0.95);
+t.equal(potter([1, 2, 3]), 3 * 8 * 0.90);
+t.equal(potter([1, 2, 3, 4]), 4 * 8 * 0.80);
+t.equal(potter([1, 2, 3, 4, 5]), 5 * 8 * 0.75);
+
+t.equal(potter([1, 1, 2]), 2 * 8 * 0.95 + 8);
+t.equal(potter([1, 1, 2, 2]), 4 * 8 * 0.80);
+t.equal(potter([1, 2, 2, 3, 4, 5]), 5 * 8 * 0.75 + 8);
+t.equal(potter([1, 1, 1, 2, 2, 2]), 6 * 8 * 0.95);
+t.equal(potter([1, 1, 2, 2, 3, 3, 4, 5]), 2 * 4* 8 * 0.80);
+
+### Process
 - Fork the repository
 - clone it to your computer
 - Run: `npm install` in the project directory
