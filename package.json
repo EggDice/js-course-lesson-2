@@ -1,0 +1,24 @@
+{
+  "name": "js-course-lesson-1",
+  "version": "1.0.0",
+  "description": "Lesson 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./test/index.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EggDice/js-course-lesson-1.git"
+  },
+  "author": "Tamas Kokeny <tamas.kokeny.87@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EggDice/js-course-lesson-1/issues"
+  },
+  "homepage": "https://github.com/EggDice/js-course-lesson-1",
+  "dependencies": {
+  },
+  "devDependencies": {
+    "tape": "^3.0.0"
+  }
+}
