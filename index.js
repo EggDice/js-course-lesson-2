@@ -1,8 +1,8 @@
 'use strict';
 
-function int2roman() {
+function potter() {
 
 }
 
-module.exports = int2roman;
+module.exports = potter;
 
