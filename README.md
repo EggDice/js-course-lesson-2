@@ -44,6 +44,7 @@ For example, how much does this basket of books cost?
 
 ### Suggested Tests
 
+```js
 t.equal(potter([]), 0);
 t.equal(potter([1]), 8);
 t.equal(potter([2]), 8);
@@ -63,6 +64,7 @@ t.equal(potter([1, 1, 2, 2]), 4 * 8 * 0.80);
 t.equal(potter([1, 2, 2, 3, 4, 5]), 5 * 8 * 0.75 + 8);
 t.equal(potter([1, 1, 1, 2, 2, 2]), 6 * 8 * 0.95);
 t.equal(potter([1, 1, 2, 2, 3, 3, 4, 5]), 2 * 4* 8 * 0.80);
+```
 
 ### Process
 - Fork the repository
