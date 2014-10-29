@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/EggDice/js-course-lesson-1",
   "dependencies": {
+    "lodash": "^2.4.1"
   },
   "devDependencies": {
     "tape": "^3.0.0"
